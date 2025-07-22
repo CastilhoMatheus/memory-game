@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('start');
-  const [players, setPlayers] = useState(null);
+  const [players, setPlayers] = useState({});
 
   function handleStart(playerData) {
     setPlayers(playerData);
@@ -17,8 +17,8 @@ function App() {
 
       {currentScreen === 'game' && (
         <GameBoard
-          player1={players.player1}
-          player2={players.player2}
+          initialPlayer1={players.player1}
+          initialPlayer2={players.player2}
           onRestart={() => setCurrentScreen('start')}
         />
       )}

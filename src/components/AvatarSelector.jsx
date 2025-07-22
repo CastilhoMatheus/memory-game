@@ -7,7 +7,7 @@ export default function AvatarSelector({ options, selectedId, onSelect }) {
       {options.map((opt) => (
         <AvatarDisplay
           key={opt.id}
-          src={opt.src}
+          avatar={opt.id}
           alt={opt.id}
           selected={opt.id === selectedId}
           onClick={() => onSelect(opt.id)}
