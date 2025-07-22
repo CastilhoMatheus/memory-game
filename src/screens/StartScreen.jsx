@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AvatarSelector from '../components/AvatarSelector';
 
 export default function StartScreen({ onStart }) {
@@ -8,10 +8,10 @@ export default function StartScreen({ onStart }) {
   const [player2Avatar, setPlayer2Avatar] = useState(null);
 
   const avatars = [
-    { id: 'beaver', src: 'src/assets/avatar1.png' },
-    { id: 'coala', src: 'src/assets/avatar2.png' },
-    { id: 'sloth', src: 'src/assets/avatar3.png' },
-    { id: 'reindeer', src: 'src/assets/avatar4.png' },
+    { id: 'beaver' },
+    { id: 'coala' },
+    { id: 'sloth' },
+    { id: 'reindeer' },
   ];
 
   const canStart = player1Name && player2Name && player1Avatar && player2Avatar;
