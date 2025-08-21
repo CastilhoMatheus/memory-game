@@ -13,7 +13,7 @@ export default function Card({
 
   return (
     <div
-      className={`relative w-24 h-32 [perspective:1000px] ${
+      className={`relative w-30 h-39 [perspective:1000px] ${
         isMatched ? 'pointer-events-none opacity-50' : 'cursor-pointer'
       }`}
       onClick={handleClick}
@@ -28,7 +28,7 @@ export default function Card({
       >
         {/* Front Face */}
         <div className="p-1 absolute inset-0 [backface-visibility:hidden] bg-white border-3 border-sky-500 rounded-lg shadow flex items-center justify-center font-bold flex flex-col">
-          <span className={`fi fi-${flagCode} ring`}></span>
+          <span className={`fi fi-${flagCode} ring text-5xl`}></span>
           <div className="mt-5 text-xs font-semibold text-gray-800 break-keep font-stretch-condensed text-center">
             {name}
           </div>
@@ -42,7 +42,7 @@ export default function Card({
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="size-9"
+            className="size-11"
           >
             <path
               strokeLinecap="round"
