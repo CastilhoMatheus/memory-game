@@ -19,7 +19,7 @@ export default function Board({ onMiss, onMatch, onAllMatched }) {
 
   useEffect(() => {
     // Shuffle all countries and pick first 27
-    const selected = shuffleArray(countries).slice(0, 27);
+    const selected = shuffleArray(countries).slice(0, 20);
     setTotalPairs(selected.length);
     // Duplicate pairs and shuffle
     const paired = shuffleArray([...selected, ...selected]);
@@ -61,7 +61,7 @@ export default function Board({ onMiss, onMatch, onAllMatched }) {
   };
 
   return (
-    <div className="grid grid-cols-9 gap-3 justify-center">
+    <div className="grid grid-cols-8 gap-3 justify-center">
       {cards.map((card, idx) => (
         <Card
           key={idx}
