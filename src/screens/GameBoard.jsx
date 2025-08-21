@@ -45,7 +45,7 @@ export default function GameBoard({ initialPlayer1, initialPlayer2 }) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-900">
         <GameOverScreen
-          winner={players[0].score > players[1].score ? players[0] : players[1]}
+          players={players}
           onRestart={() => window.location.reload()}
         />
       </div>
